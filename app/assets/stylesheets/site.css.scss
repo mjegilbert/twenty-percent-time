@@ -1,0 +1,81 @@
+// Place all the styles related to the Site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  background: url("/assets/background.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  color: #fff;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#header {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #ddd;
+  padding: 15px;
+}
+
+#signin {
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  padding-top: 35px;
+  
+  a {
+    text-decoration: none;
+    color: #f69;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#analyze {
+  margin-top: 35px;
+
+  a {
+    text-decoration: none;
+    font-size: 48px;
+    color: #6f9;
+    text-shadow: 1px 1px 1px #ddd;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+#ohmystars {
+  text-align: center;
+  margin-top: 135px;
+  display: none;
+  
+  img {
+    width: 200px;
+  }
+}
+
+.textblock {
+  padding-top: 100px;
+  text-align: center;
+  width: 700px;
+  margin: auto;
+  font-size: 24px;
+}
+
+#yay {
+  color: #f69;
+  text-shadow: 1px 1px 1px #ddd;
+  font-size: 48px;
+  margin-bottom: 30px;
+}

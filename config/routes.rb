@@ -1,6 +1,11 @@
 Hcs::Application.routes.draw do
   get "store/create"
   post "store/create"
+  get "site/index"
+  get "site/authorize_linkedin"
+  get "site/donk"
+  get "site/logout"
+  get "site/show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,7 +56,7 @@ Hcs::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'site#index'
 
   # See how all your routes lay out with "rake routes"
 

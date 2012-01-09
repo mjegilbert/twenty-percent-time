@@ -7,11 +7,15 @@ class StoreController < ApplicationController
     experiences = params["experience"]
     search = params["search"]
     search =~ /id=(.*)&/
-    puts id
+    id = $1
     minion = Minion.find_by_uuid(id)
     if !minion 
+      minion = Minion.create
+      minion.uuid = id
+      
       educations.each do |ed|
-        
+        school = School.find_by_name(ed["school"]) || School.create("name" => ed["school"])
+        ed_session = EdSession.create
       end
     end 
     # education sections 

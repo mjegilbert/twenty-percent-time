@@ -2,13 +2,15 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'pg', '~> 0.12.2'
+gem 'linkedin'
+gem 'haml'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 group :development do
   gem 'sqlite3'
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
