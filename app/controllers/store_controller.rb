@@ -1,5 +1,9 @@
 class StoreController < ApplicationController
   def create
-    render :text => "Hello World"
+    puts params
+    respond_to do |format|
+      format.html { render :text => "html" }
+      format.js { render :text => "js" }
+    end
   end
 end
