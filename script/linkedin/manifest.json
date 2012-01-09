@@ -1,0 +1,15 @@
+{
+  "name": "LinkedIn Aggregator",
+  "version": "1.0",
+  "description": "Sends LinkedIn information.",
+	"content_scripts": [
+		{
+			"matches": ["http://www.linkedin.com/profile/view/*"],
+			"css": [],
+			"js": ["jquery-1.7.1.min.js","linkedin.js"]
+		}
+	],
+	"permissions": [
+		"http://*/"
+	]	
+}
