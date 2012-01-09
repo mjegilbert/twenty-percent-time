@@ -6,6 +6,7 @@ class CreateEdSessions < ActiveRecord::Migration
       t.datetime    :start_date
       t.datetime    :end_date
       t.string      :degree
+      t.string      :major
       t.string      :text
       t.timestamps
     end
