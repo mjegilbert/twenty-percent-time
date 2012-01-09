@@ -6,39 +6,45 @@ $(document).ready(function(){
 		"search":window.location.search
 	};
 	$.each(educations,function(index,value){
-		var ed = [
-			$(value).find("h3 a").html(), // school
-			$(value).find("p.period abbr.dtstart").attr("title"), // start
-			$(value).find("p.period abbr.dtend").attr("title"), // end
-			$(value).find("h4 span.degree").html(), // degree
-			$(value).find("h4 span.major a").html(), // major	
-			$(value).find("p.details-education").html() // text
-		]
+		var school = $(value).find("h3 a").html()
+		var start  = $(value).find("p.period abbr.dtstart").attr("title")
+		var end  	 = $(value).find("p.period abbr.dtend").attr("title")
+		var degree = $(value).find("h4 span.degree").html()
+		var major  = $(value).find("h4 span.major a").html()
+		var text   = $(value).find("p.details-education").html()
+		var ed = {
+			"school" : school ? school : "",
+			"start"  : start  ? start  : "",
+			"end"		 : end 	  ? end 	 : "",
+			"degree" : degree ? degree : "",
+			"major"	 : major  ? major  : "",
+			"text"   : text   ? text 	 : ""
+		}
 		data["education"].push(ed)
 	})
 	var experiences = $("#profile-experience").find("div.position")
 	$.each(experiences,function(index,value){
+		var position = $(value).find("h3 a").html()
+		var start = $(value).find("p.period abbr.dtstart").attr("title")
+		var end = $(value).find("p.period abbr.dtend").attr("title")
 		var company = $(value).find("h4 a span").html()
 		if(!company) {
 			company = $(value).find("h4 a").html()
 		}
-		var job = [
-			$(value).find("h3 a").html(), // position
-			$(value).find("p.period abbr.dtstart").attr("title"), // start
-			$(value).find("p.period abbr.dtend").attr("title"), // end
-			company,
-			$(value).find("p.description").html() // text
-		]
+		var text = $(value).find("p.description").html()
+		var job = {
+			"position" : position ? position : "",
+			"start"		 : start 	  ? start 	 : "",
+			"end"			 : end 		  ? end 		 : "",
+			"company"	 : company  ? company  : "",
+			"text"		 : text 		? text 		 : ""
+		}
 		data["experience"].push(job)
 	})
 	$.ajax({
 		type: 'POST',
 		url: "http://young-beach-2959.herokuapp.com/store/create",
-		data: {
-			"eduction":data["education"],
-			"experience":data["experience"],
-			"search":data["search"]
-		},
+		data: data,
 		crossDomain: true,
 		success: function(data,textStatus,jqXHR) {
 		},
