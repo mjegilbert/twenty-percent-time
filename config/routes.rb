@@ -1,4 +1,7 @@
 Hcs::Application.routes.draw do
+  get "store/create"
+  post "store/create"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
