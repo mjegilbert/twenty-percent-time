@@ -1,9 +1,13 @@
 $(document).ready(function(){
+	var first_name = $("span.given-name").html()
+	var last_name  = $("span.family-name").html()
 	var educations = $("#profile-education").find("div.position")
 	var data = {
-		"education":[],
-		"experience":[],
-		"search":window.location.search
+		"first_name" : first_name ? first_name : "",
+		"last_name"	 : last_name  ? last_name  : "",
+		"education"	 : [],
+		"experience" : [],
+		"search"		 : window.location.search
 	};
 	$.each(educations,function(index,value){
 		var school = $(value).find("h3 a").html()
