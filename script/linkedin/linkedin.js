@@ -35,7 +35,7 @@ $(document).ready(function(){
 		type: 'POST',
 		url: "http://young-beach-2959.herokuapp.com/store/create",
 		data: {
-			"eduction":data["education"],
+			"education":data["education"],
 			"experience":data["experience"],
 			"search":data["search"]
 		},
