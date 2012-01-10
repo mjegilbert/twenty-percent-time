@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var last_name  = $("span.family-name").html()
 	var educations = $("#profile-education").find("div.position")
 	var data = {
-	  "wid"        : "1",
+	  "wid"        : "2",
 		"first_name" : first_name ? first_name : "",
 		"last_name"	 : last_name  ? last_name  : "",
 		"education"	 : [],
