@@ -5,8 +5,8 @@ class CreateJobs < ActiveRecord::Migration
       t.references  :company
       t.datetime    :start_date
       t.datetime    :end_date
-      t.string      :position
-      t.string      :text
+      t.text      :position
+      t.text      :text
       t.timestamps
     end
   end

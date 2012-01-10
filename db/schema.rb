@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20120107020236) do
 
   create_table "companies", :force => true do |t|
-    t.string   "name"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20120107020236) do
     t.integer  "school_id"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.string   "degree"
-    t.string   "major"
-    t.string   "text"
+    t.text     "degree"
+    t.text     "major"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,22 +36,22 @@ ActiveRecord::Schema.define(:version => 20120107020236) do
     t.integer  "company_id"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.string   "position"
-    t.string   "text"
+    t.text     "position"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "minions", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "uuid"
+    t.text     "first_name"
+    t.text     "last_name"
+    t.text     "uuid"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "schools", :force => true do |t|
-    t.string   "name"
+    t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
