@@ -17,7 +17,7 @@ class StoreController < ApplicationController
         ed_school = sanitize_linkedin ed["school"]
         next if ed["start"].empty?
         ed_start = ed["start"].length == 4 ? DateTime.strptime(ed["start"],"%Y") : DateTime.strptime(ed["start"],"%Y-%m-%d")
-        ed_end = ed["end"].length == 4 ? DateTime.strptime(ed["end"],"%Y") : DateTime.strptime(ed["end"],"%Y-%m-%d")
+        ed_end = ed["end"].length == 4 ? DateTime.strptime(ed["end"],"%Y") : DateTime.strptime(ed["end"],"%Y-%m-%d") rescue nil
         ed_degree = sanitize_linkedin ed["degree"]
         ed_major = sanitize_linkedin ed["major"]
         ed_text = sanitize_linkedin ed["text"]
@@ -32,7 +32,7 @@ class StoreController < ApplicationController
         exp_company = sanitize_linkedin exp["company"]
         next if exp["start"].empty?
         exp_start = exp["start"].length == 4 ? DateTime.strptime(exp["start"],"%Y") : DateTime.strptime(exp["start"],"%Y-%m-%d")
-        exp_end = exp["end"].length == 4 ? DateTime.strptime(exp["end"],"%Y") : DateTime.strptime(exp["end"],"%Y-%m-%d")
+        exp_end = exp["end"].length == 4 ? DateTime.strptime(exp["end"],"%Y") : DateTime.strptime(exp["end"],"%Y-%m-%d") rescue nil
         exp_position = sanitize_linkedin exp["position"]
         exp_text = sanitize_linkedin exp["text"]
         company = Company.find_by_name(exp_company) || Company.create("name" => exp_company)
