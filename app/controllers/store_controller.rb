@@ -32,7 +32,7 @@ class StoreController < ApplicationController
         exp_end = sanitize_linkedin exp["end"]
         exp_position = sanitize_linkedin exp["position"]
         exp_text = sanitize_linkedin exp["text"]
-        if !exp_company.empty? && (exp_start)
+        if !exp_company.empty? && !(exp_start.empty?)
           company = Company.find_by_name(exp_company) || Company.create("name" => exp_company)
           ed_session = Job.create(:minion => minion, :company => company, 
             :start_date => exp_start, :end_date => exp_end, :position => exp_position, 
@@ -51,6 +51,7 @@ class StoreController < ApplicationController
   
   private 
   def sanitize_linkedin(string)
+    string.gsub(/<\/?[^>]+>/,"")
     string.gsub(/[^\w'\.\s]/, "").downcase
   end
 end
