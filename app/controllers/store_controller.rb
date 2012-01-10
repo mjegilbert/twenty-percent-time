@@ -2,13 +2,15 @@ class StoreController < ApplicationController
   skip_before_filter :verify_autenticity_token
 
   def create
+    puts "receiving post"
     educations = params["education"]
     experiences = params["experience"]
     search = params["search"]
     search =~ /id=([^&]+)/
     id = $1
     minion = Minion.find_by_uuid(id)
-    if minion 
+    if !minion 
+      puts "created new minion"
       minion = Minion.create(:uuid => id, :first_name => params["first_name"], :last_name => params["last_name"])
       educations.each do |num, ed|
         ed_school = sanitize_linkedin ed["school"]
@@ -37,6 +39,8 @@ class StoreController < ApplicationController
             :text => exp_text)
         end
       end
+    else
+      puts "minion found"
     end 
       
     respond_to do |format|
