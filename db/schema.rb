@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107020236) do
+ActiveRecord::Schema.define(:version => 20120110194135) do
 
   create_table "companies", :force => true do |t|
     t.text     "name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120107020236) do
     t.text     "uuid"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "wid"
   end
 
   create_table "schools", :force => true do |t|

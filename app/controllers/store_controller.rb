@@ -11,7 +11,7 @@ class StoreController < ApplicationController
     minion = Minion.find_by_uuid(id)
     if !minion 
       puts "created new minion"
-      minion = Minion.create(:uuid => id, :first_name => params["first_name"], :last_name => params["last_name"])
+      minion = Minion.create(:uuid => id, :first_name => params["first_name"], :last_name => params["last_name"], :wid => params["wid"])
       educations.each do |num, ed|
         next if ed["school"].empty?
         ed_school = sanitize_linkedin ed["school"]
