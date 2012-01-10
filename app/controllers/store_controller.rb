@@ -3,8 +3,8 @@ class StoreController < ApplicationController
 
   def create
     puts "receiving post"
-    educations = params["education"]
-    experiences = params["experience"]
+    educations = params["education"] || []
+    experiences = params["experience"] || []
     search = params["search"]
     search =~ /id=([^&]+)/
     id = $1

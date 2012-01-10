@@ -45,6 +45,7 @@ $(document).ready(function(){
 		}
 		data["experience"].push(job)
 	})
+	console.log(data)
 	$.ajax({
 		type: 'POST',
 		url: "http://young-beach-2959.herokuapp.com/store/create",
