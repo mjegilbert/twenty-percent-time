@@ -5,6 +5,7 @@ gem 'pg', '~> 0.12.2'
 gem 'linkedin'
 gem 'haml'
 gem 'watir-webdriver'
+gem 'iron_worker'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
