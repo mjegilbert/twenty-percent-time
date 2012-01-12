@@ -26,6 +26,7 @@ def grab_contacts(browser)
           browser.goto "www.linkedin.com"+$1
           sleep(1)
           browser.back
+          sleep(2)
         end
       end
     end

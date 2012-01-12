@@ -1,0 +1,70 @@
+[1326329626512][INFO]:    ChromeDriver 18.0.995.0
+[1326329626752][FINE]:    Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[1326329626753][INFO]:    Using named testing interface
+[1326329627247][INFO]:    Connected to Chrome successfully. Version: 16.0.912.75
+[1326329627251][FINE]:    Command received (/session/87b90296f4d603a4b6141bce850d225e)
+[1326329627251][FINE]:    Command finished (/session/87b90296f4d603a4b6141bce850d225e) with response {
+   "sessionId": "87b90296f4d603a4b6141bce850d225e",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "18.0.995.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "mac",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "16.0.912.75",
+      "webStorageEnabled": false
+   }
+}
+
+[1326329627252][FINE]:    Command received (/session/87b90296f4d603a4b6141bce850d225e/url) with params {
+   "url": "http://www.linkedin.com"
+}
+
+[1326329627252][FINER]:   Waiting for all views to stop loading...
+[1326329627260][FINER]:   Done waiting for all views to stop loading
+[1326329628208][FINER]:   Waiting for all views to stop loading...
+[1326329628240][FINER]:   Done waiting for all views to stop loading
+[1326329628240][FINE]:    Command finished (/session/87b90296f4d603a4b6141bce850d225e/url) with response {
+   "sessionId": "87b90296f4d603a4b6141bce850d225e",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[1326329628241][FINE]:    Command received (/session/87b90296f4d603a4b6141bce850d225e/url)
+[1326329628241][FINER]:   Waiting for all views to stop loading...
+[1326329628241][FINER]:   Done waiting for all views to stop loading
+[1326329628257][FINER]:   Waiting for all views to stop loading...
+[1326329628257][FINER]:   Done waiting for all views to stop loading
+[1326329628257][FINE]:    Command finished (/session/87b90296f4d603a4b6141bce850d225e/url) with response {
+   "sessionId": "87b90296f4d603a4b6141bce850d225e",
+   "status": 0,
+   "value": "http://www.linkedin.com/"
+}
+
