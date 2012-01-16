@@ -15,3 +15,5 @@
 /tmp
 /script/data.txt
 /script/chromedriver.log
+*.DS_Store
+db/schema.rb

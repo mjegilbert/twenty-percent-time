@@ -21,6 +21,17 @@ namespace :thaisan do
                 ]
         file.puts stuff.join(", ")
       end
+      minion.ed_sessions.each do |e|
+        stuff = [
+                  minion.uuid,
+                  minion.first_name,
+                  minion.last_name,
+                  e.school.name,
+                  e.start_date,
+                  e.end_date,
+                ]
+        file.puts stuff.join(", ")
+      end
     end
     file.close
   end

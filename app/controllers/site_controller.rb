@@ -21,7 +21,7 @@ class SiteController < ApplicationController
     pin = params[:oauth_verifier]
     atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
     
-    user = User.new(:atoken => atoken, :asecret => asecret)
+    user = User.new(:atoken => atoken, :asecret => asecret, :first_name => client.profile[:first_name], :last_name => client.profile[:last_name])
     user.save
     
     session[:atoken] = atoken
@@ -38,7 +38,8 @@ class SiteController < ApplicationController
     worker = ConnectionWorker.new
     worker.atoken = session[:atoken]
     worker.asecret = session[:asecret]
-    worker.queue
+    worker.run_local
+    # worker.queue
     
     # Calculate analysis
     # ...

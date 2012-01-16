@@ -5,9 +5,9 @@ class CreateEdSessions < ActiveRecord::Migration
       t.references  :school
       t.datetime    :start_date
       t.datetime    :end_date
-      t.text      :degree
-      t.text      :major
-      t.text      :text
+      t.text        :degree
+      t.text        :major
+      t.text        :text
       t.timestamps
     end
   end
