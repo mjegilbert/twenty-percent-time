@@ -38,8 +38,8 @@ class SiteController < ApplicationController
     worker = ConnectionWorker.new
     worker.atoken = session[:atoken]
     worker.asecret = session[:asecret]
-    worker.run_local
-    # worker.queue
+    # worker.run_local
+    worker.queue
     
     # Calculate analysis
     # ...

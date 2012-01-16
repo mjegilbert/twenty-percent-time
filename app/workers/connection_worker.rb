@@ -31,7 +31,7 @@ class ConnectionWorker < IronWorker::Base
                             :uuid => uuid)
         minion.save
         
-        # School  
+        # School
         educations = person["educations"]["all"]
         if educations
           educations.each do |ed|
