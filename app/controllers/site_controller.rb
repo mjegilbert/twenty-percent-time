@@ -35,11 +35,11 @@ class SiteController < ApplicationController
     client.authorize_from_access(session[:atoken], session[:asecret])
     
     # Queue up a worker to retrieve user's connections
-    worker = ConnectionWorker.new
-    worker.atoken = session[:atoken]
-    worker.asecret = session[:asecret]
-    # worker.run_local
-    worker.queue
+    # worker = ConnectionWorker.new
+    # worker.atoken = session[:atoken]
+    # worker.asecret = session[:asecret]
+    # # worker.run_local
+    # worker.queue
     
     # Calculate analysis
     # ...
